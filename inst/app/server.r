@@ -987,7 +987,7 @@ quiet(
             }
 
             oldwd <- setwd(tempdir())
-            rgdal::writeOGR(createShp(), dsn="TreeCrownExport.shp", layer="TreeCrownExport", driver="ESRI Shapefile")
+            sf::write_sf(createShp(), dsn="TreeCrownExport.shp", layer="TreeCrownExport", driver="ESRI Shapefile")
             zip(zipfile='TreeCrownExport.zip', files=Sys.glob("TreeCrownExport.*"))
             file.copy("TreeCrownExport.zip", file)
             if (length(Sys.glob("TreeCrownExport.*"))>0){
@@ -1021,7 +1021,7 @@ quiet(
               file.remove(Sys.glob("TreeLocationExport.*"))
             }
             oldwd <- setwd(tempdir())
-            rgdal::writeOGR(createShpXY(), dsn="TreeLocationExport.shp",
+            sf::write_sf(createShpXY(), dsn="TreeLocationExport.shp",
                             layer="TreeLocationExport", driver="ESRI Shapefile")
             zip(zipfile='TreeLocationExport.zip', files=Sys.glob("TreeLocationExport.*"))
             file.copy("TreeLocationExport.zip", file)

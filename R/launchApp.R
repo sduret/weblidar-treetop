@@ -39,7 +39,7 @@
 #'@importFrom sp coordinates SpatialPointsDataFrame SpatialPolygonsDataFrame merge proj4string
 #'@importFrom raster raster projection res aggregate plot crop area intersect ncell cv
 #'@importFrom geometry convhulln
-#'@importFrom rgdal writeOGR
+#'@importFrom sf write_sf
 #'@importFrom rgl rgl.triangles lines3d axes3d title3d rgl.cur rgl.close
 #'@importFrom lidR find_trees silva2016
 #'@importFrom stars st_as_stars
